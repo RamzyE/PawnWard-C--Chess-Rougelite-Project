@@ -1,0 +1,8 @@
+# ignores vscode folder
+.vscode/
+
+# ignores object files
+*.o
+
+# ignore executable
+main
