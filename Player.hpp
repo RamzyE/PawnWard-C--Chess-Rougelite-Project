@@ -10,8 +10,10 @@ public:
     void setPlayerHealth(const int &playerHealth_);
     void setMaxPlayerHealth(const int &maxPlayerHealth_);
     void setPlayerGold(const int &playerGold_);
-    void setPlayerPieces(const std::vector<Piece *> &playerPieces_);
-    void setPlayerPerks(const std::vector<Perk *> &playerPerks_);
+    bool addPlayerPiece(Piece *piece, const int &position);
+    bool replacePiece(Piece *piece, const int &position);
+    void addPlayerPerk(Perk *perk);
+    void displayPlayerStats() const; //WIP
 
     int getCurrentPlayerHealth() const;
     int getMaxPlayerHealth() const;
