@@ -1,12 +1,10 @@
 #include "Bishop.hpp"
-Bishop::Bishop(Piece::PieceTypes type, Piece::PieceColors color, int row, int col)
-    : Piece(type, color, row, col) {}
+Bishop::Bishop(Piece::PieceTypes type, Piece::PieceColors color, int row, int col, bool alive)
+    : Piece(type, color, row, col, alive) {}
 
-bool Bishop::isValidMove(int newRow, int newCol, int boardSize) const { // WIP
-    if (newRow >= 0 && newRow < boardSize && newCol >= 0 && newCol < boardSize) {
-        if (abs(newRow - pieceRow) == abs(newCol - pieceCol)) {
-            return true;
-        }
+bool Bishop::isValidMove(int newRow, int newCol) const { // WIP
+    if (abs(newRow - pieceRow) == abs(newCol - pieceCol)) {
+        return true;
     }
 
     return false;

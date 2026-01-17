@@ -28,21 +28,21 @@ int main() {
 
     Board board(8);
 
-    Knight rook(Piece::PieceTypes::KNIGHT, Piece::PieceColors::WHITE, 7, 0);
-    Pawn pawn(Piece::PieceTypes::PAWN, Piece::PieceColors::BLACK, 6, 0);
+    Knight rook(Piece::PieceTypes::KNIGHT, Piece::PieceColors::WHITE, 7, 0, 1);
+    Pawn pawn(Piece::PieceTypes::PAWN, Piece::PieceColors::BLACK, 6, 0, 1);
 
     board.placePiece(7, 2, &rook);
     board.placePiece(6, 0, &pawn);
 
     board.displayBoard();
     std::cout << std::endl;
-    board.movePiece(6, 0, 8, &rook);
+    board.movePiece(6, 0, &rook);
     board.displayBoard();
     std::cout << std::endl;
-    board.movePiece(7, 2, 8, &rook);
+    board.movePiece(7, 2, &rook);
     board.displayBoard();
     std::cout << std::endl;
-    board.movePiece(6, 1, 8, &pawn);
+    board.movePiece(6, 1, &pawn);
     board.displayBoard();
 
 

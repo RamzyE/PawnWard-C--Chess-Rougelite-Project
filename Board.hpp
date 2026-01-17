@@ -14,12 +14,14 @@ public:
     void setBoardSize(const int &size);
     int getBoardSize() const;
     void displayBoard() const;
-    void placePiece(const int &row, const int &col, Piece *piece);
-    bool pathCheckAction(Piece *piece, const int &newRow, const int &newCol);
-    bool movePiece(const int &newRow, const int &newCol, const int &boardSize, Piece *piece); // WIP, will be bool
+    bool placePiece(const int &row, const int &col, Piece *piece);
+    bool movePiece(const int &newRow, const int &newCol, Piece *piece); // WIP, will be bool
 
 private:
-    std::vector<std::vector<Piece *>> chessBoard; // Char is a placeHolder
+    bool isInBounds(const int &newRow, const int &newCol);
+    bool isPathClear(const int &newRow, const int &newCol, Piece *piece);
+    bool isCaptureLegal(const int &newRow, const int &newCol, Piece* piece);
+    std::vector<std::vector<Piece *>> chessBoard; // The Board Itself
     int boardSize;
 };
 #endif

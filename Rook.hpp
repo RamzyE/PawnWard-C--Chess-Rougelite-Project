@@ -4,9 +4,9 @@
 
 class Rook : public Piece {
 public:
-    Rook(Piece::PieceTypes type, Piece::PieceColors color, int row, int col);
+    Rook(Piece::PieceTypes type, Piece::PieceColors color, int row, int col, bool alive);
 
-    bool isValidMove(int newRow, int newCol, int boardSize) const override;
+    bool isValidMove(int newRow, int newCol) const override;
     std::string getPiece() const override;
     ~Rook() override;
 };
