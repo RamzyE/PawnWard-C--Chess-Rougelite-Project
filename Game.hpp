@@ -10,7 +10,7 @@ public:
     void gameStart(); // This is all the main needs to call to start the game completely.
 
 private:
-    bool gameMenu();
+    bool gameMenu(); // Finished
 
     void worldOne();
     void worldTwo();
